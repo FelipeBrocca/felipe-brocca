@@ -1,0 +1,69 @@
+.toggleButton{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    opacity: 0;
+    transition: all 1s;
+    transition-delay: 200ms;
+    transform: translateY(-100%);
+    box-shadow: 0 0 10px 0 rgba(42, 39, 39, 0.672);
+}
+.toggleButton.dark{
+    box-shadow: none;
+}
+.toggleButton.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+.toggleButton input{
+    position: absolute;
+    opacity: 0;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    z-index: 10;
+}
+.esp{
+    z-index: 2;
+    transition: .5s ease;
+    background-image: url('../../public/argentina.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+input:checked~.esp{
+    transform: rotate(360deg) scale(0);
+}
+.eng{
+    position: absolute;
+    font-size: 20px;
+    background-color: var(--orange);
+    transform: scale(0);
+    transition: .5s ease;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../../public/usa.png');
+    background-position: center;
+    background-size: cover;
+}
+input:checked~.eng{
+    transition-delay: .4s;
+    transform: scale(1) rotate(-360deg);
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 1025px) {
+    .toggleButton{
+        transform: translateY(0);
+        opacity: 1;
+    box-shadow: 0 0 5px 0 rgba(57, 57, 57, 0.672);
+    }
+}

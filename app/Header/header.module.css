@@ -1,0 +1,464 @@
+.headerCont{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+}
+.headerContent{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+}
+.headerFixedCont{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    transition: all .2s;
+    opacity: 0.5;
+    background-color: var(--black);
+    z-index: 10;
+}
+.headerFixedCont.active{
+    transform: translateY(0);
+    transition: all 1s;
+    opacity: 0.99;
+}
+.logo{
+    width: auto;
+    height: 90%;
+    z-index: 100;
+    filter: drop-shadow(0 0 2px rgba(23, 23, 23, 0.729));
+    cursor: pointer;
+}
+.hambMenuDark,
+.hambMenu{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    align-items: flex-end;
+    z-index: 101;
+}
+.hambMenuDark div{
+    height: 1.5px;
+    background-color: var(--green);
+}
+.hambMenu div{
+    height: 1.5px;
+    background-color: var(--black);
+}
+.hamb1{
+    animation: hamb1 .5s forwards;
+    transition: all .3s;
+}
+.hamb2{
+    animation: hamb2 .5s forwards .2s;
+    transition: all .3s;
+}
+.hamb3{
+    animation: hamb3 .5s forwards .4s;
+    transition: all .3s;
+}
+
+@keyframes hamb1 {
+    from {width: 0;}
+    to {width: 100%;}
+}
+@keyframes hamb2 {
+    from {width: 0;}
+    to {width: 80%;}
+}
+@keyframes hamb3 {
+    from {width: 0;}
+    to {width: 100%;}
+}
+
+.menuCont{
+    position: fixed;
+    width: 70%;
+    max-width: 250px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: 100;
+    transform: translateX(0vw);
+    visibility: visible;
+    transition: 500ms;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 100px 15px 0px 15px;
+    box-shadow: 0 0 20px 0 rgba(42, 40, 40, 0.412);
+}
+.menuContClosed{
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(100vw);
+}
+.backdropPopUpDark{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: rgba(3, 3, 3, 0.629);
+    z-index: 99;
+}
+.backdropPopUp{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: rgba(5, 5, 5, 0.114);
+    z-index: 99;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.listNavbar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.listNavbarDark{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.listNavbar .navBarItem{
+    width: 100%;
+    list-style: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--lightgrey);
+    cursor: pointer;
+    text-align: center;
+    font-weight: 550;
+    font-family: 'Noto Serif Telugu', serif;
+}
+.listNavbarDark .navBarItem{
+    width: 100%;
+    list-style: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--whiteLet);
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Noto Serif Telugu', serif;
+}
+.listNavbar .navBarItem:hover{
+   color: var(--orange);
+}
+.listNavbarDark .navBarItem:hover{
+   color: var(--green);
+}
+.toggleButton{
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    opacity: 0;
+    width: 35px;
+    height: 35px;
+    transition: all 1s;
+    transition-delay: 100ms;
+    transform: translateY(-100%);
+}
+.toggleButton.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+.toggleButton input{
+    position: absolute;
+    opacity: 0;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    z-index: 10;
+}
+.moon{
+    font-size: 20px;
+    color: var(--green);
+    filter: drop-shadow(0 0 2px rgba(100, 201, 224, 0.498));
+    z-index: 2;
+    transition: 1s ease;
+    transition-delay: .4s;
+}
+input:checked~.moon{
+    transform: rotate(360deg) scale(0);
+}
+.toggle{
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-color: var(--black);
+    border-radius: 50%;
+    z-index: 1;
+    border: 2px solid var(--white);
+    transition: .5s;
+}
+input:checked~.toggle{
+    background-color: var(--white);
+    border: none;
+    box-shadow: 0 0 10px 0 rgba(42, 39, 39, 0.672);
+}
+
+.sun{
+    position: absolute;
+    font-size: 20px;
+    color: var(--orange);
+    filter: drop-shadow(0 0 2px rgba(100, 201, 224, 0.498));
+    transform: scale(0);
+    transition: .5s ease;
+    z-index: 2;
+}
+input:checked~.sun{
+    transition-delay: .4s;
+    transform: scale(1) rotate(-360deg);
+}
+.navbarBig{
+    display: none;
+}
+
+.contextMang{
+    display: flex;
+    gap: 20px;
+}
+.socMedNav{
+    display: none;
+}
+.email{
+    display: none;
+}
+
+@media (min-width: 769px) {
+    .hambMenu,
+    .hambMenuDark{
+        display: none;
+    }
+    .menuCont,
+    .menuContClosed{
+        display: none;
+    }
+    .listNavbarDark,
+    .listNavbar{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0;
+        padding: 10px;
+        border-radius: 20px;
+    }
+    .listNavbarDark{
+        border-top: 2px solid var(--grey);
+        border-bottom: 2px solid var(--grey);
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.525);
+    }
+    .listNavbar{
+        border-top: 2px solid var(--whiteLet);
+        border-bottom: 2px solid var(--whiteLet);
+        box-shadow: 0 0 5px 0 rgba(110, 110, 110, 0.525);
+    }
+    .navbarBig{
+        width: 70%;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        opacity: 0;
+        transform: translateY(-100%);
+        transition: all 1s;
+        transition-delay: 300ms;
+    }
+    .navbarBig.active{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .listNavbar .navBarItem,
+    .listNavbarDark .navBarItem{
+        font-size: 18px;
+        width: 25%;
+    }
+    .listNavbarDark .navBarItem:hover{
+        color: var(--white);
+    }
+    .listNavbar .navBarItem:hover{
+        color: var(--grey);
+    }
+    .backdropPopUp,
+    .backdropPopUpDark{
+        display: none;
+    }
+}
+@media (min-width: 1025px) {
+    .headerCont.bright{
+        box-shadow: 0 0 10px 0 rgb(196, 196, 196);
+    }
+    .headerCont{
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 130px;
+        box-shadow: 0 0 10px 0 rgb(20, 20, 20);
+        padding: 0;
+        justify-content: space-around;
+        transform: translateX(-100%);
+        transition: all 1s;
+    }
+    .headerFixedCont{
+        display: none;
+    }
+    .headerCont.active{
+        transform: translateX(0);
+    }
+    .logo{
+        height: auto;
+        width: 100px;
+        z-index: 100;
+        filter: drop-shadow(0 0 2px rgba(23, 23, 23, 0.729));
+    }
+    .headerContent,
+    .headerContent.dark{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        height: calc(100% - 130px);
+        padding: 10px;
+        border-radius: 20px;
+    }
+    .headerContent{
+        background-color: var(--white);
+        box-shadow: 0 0 5px 0 rgba(27, 26, 26, 0.551);
+    }
+    input:checked~.toggle{
+        box-shadow: 0 0 5px 0 rgba(73, 73, 73, 0.672);
+    }
+    .headerContent.dark{
+        background-color: var(--grey);
+        box-shadow: inset 0 0 5px 0 rgb(27, 26, 26);
+    }
+    .navbarBig{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .navbar{
+        flex-direction: column;
+        height: 100%;
+    }
+    .listNavbarDark,
+    .listNavbar{
+        flex-direction: column;
+        height: 70%;
+        justify-content: space-around;
+        padding: 0;
+        align-self: center;
+        max-height: 300px;
+    }
+    .listNavbarDark{
+        background-color: var(--black);
+    }
+    .listNavbar{
+        background-color: var(--white);
+    }
+
+    .listNavbar .navBarItem,
+    .listNavbarDark .navBarItem{
+        font-size: 17px;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        height: 25%;
+    }
+    .listNavbarDark .navBarItem{
+        border-bottom: 1px solid var(--grey);
+    }
+    .listNavbar .navBarItem{
+        border-bottom: 1px solid var(--whiteLet);
+    }
+    .listNavbar .navBarItem.lastBut{
+        border-bottom: none;
+    }
+    .listNavbar .navBarItem.lastBut:active{
+        border-top: 3px solid var(--whiteLet);
+        box-shadow: inset 0 0 2px 0 rgb(149, 149, 149);
+        border-radius: 0 0 20px 20px;
+    }
+    .listNavbarDark .navBarItem.lastBut:active{
+       border-top: 3px solid var(--grey);
+       box-shadow: inset 0 0 5px 0 rgb(22, 22, 22);
+       border-radius: 0 0 20px 20px;
+    }
+    .listNavbar .navBarItem.centerBut:active{
+        border-top: 3px solid var(--whiteLet);
+        border-bottom: 2px solid var(--whiteLet);
+        box-shadow: inset 0 0 2px 0 rgb(149, 149, 149);
+    }
+    .listNavbarDark .navBarItem.centerBut:active{
+       border-top: 3px solid var(--grey);
+       border-bottom: 2px solid var(--grey);
+       box-shadow: inset 0 0 5px 0 rgb(22, 22, 22);
+    }
+    .listNavbar .navBarItem.firstbut:active{
+        border-bottom: 3px solid var(--whiteLet);
+        box-shadow: inset 0 0 2px 0 rgb(149, 149, 149);
+        border-radius: 20px 20px 0 0;
+    }
+    .listNavbarDark .navBarItem.firstbut:active{
+       border-bottom: 3px solid var(--grey);
+       box-shadow: inset 0 0 5px 0 rgb(22, 22, 22);
+       border-radius: 20px 20px 0 0;
+    }
+    .socMedNav{
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .socMedNav > div{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 10px 5px;
+    }
+    .socMedNav > div > svg{
+        width: 35%;
+        height: auto;
+    }
+    .toggleButton{
+       transform: translateY(0);
+       opacity: 1;
+    }
+}
+
