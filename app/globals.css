@@ -1,0 +1,60 @@
+:root{
+  --black: #1e1f20;
+  --grey: #2e2e2e;
+  --lightgrey: rgb(97, 97, 97);
+  --white: #f3f3f3;
+  --whiteLet: rgb(195, 195, 195);
+  --darkGreen: #2f8873;
+  --green: #64ffda;
+  --orange: rgb(240, 141, 54);
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'San Francisco', sans-serif;
+}
+html,
+body{
+  width: calc(100vw - (100vw - 100%));
+  height: 100%;
+  display: flex;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+  width: 5px;
+  border-radius: 20px;
+}
+body::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+body::-webkit-scrollbar-thumb{
+  border-radius: 20px;
+  background-color: #585050b5;
+}
+html{
+  min-height: calc(100vh - (100vh - 100%));
+}
+
+section{
+  max-width: 1000px;
+  align-self: center;
+}
+
+.swiper{
+  padding-top: 50px;
+  padding-bottom: 80px;
+  width: 100%;
+  max-width: 1000px;
+  height: 700px;
+}
+
+div.swiper-slide{
+  width: 95%;
+  max-width: 330px;
+  height: 95%;
+  max-height: 800px;
+  min-height: 600px;
+  box-shadow: 0 0 10px 0 rgb(0, 0, 0);
+  margin: auto 0;
+}

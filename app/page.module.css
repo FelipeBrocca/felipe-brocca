@@ -1,0 +1,48 @@
+.mainIntro{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  transition: all 1s;
+  animation: dissapear 4s forwards;
+  color: var(--black);
+}
+.mainIntroDark{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black);
+  transition: all 1s;
+  animation: dissapear 4s forwards;
+}
+
+@keyframes dissapear {
+  75%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.mainPageBright{
+  background-color: var(--white);
+  width: 100%;
+  min-height: 100%;
+  transition: all 1s;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainPageDark{
+  background-color: var(--black);
+  width: 100%;
+  min-height: 100%;
+  transition: all 1s;
+  display: flex;
+  flex-direction: column;
+}
