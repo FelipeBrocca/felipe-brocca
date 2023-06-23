@@ -9,7 +9,7 @@ const HeaderFixed = ({ scrolled, disToggle, toggleMenu, setToggleMenu }) => {
     const { isDarkMode } = useTheme()
 
     return (
-        <div className={`${styles.headerFixedCont} ${isDarkMode ? styles.dark : ''} ${scrolled ? styles.active : ''}`}>
+        <div className={`${styles.headerFixedCont} ${isDarkMode ? styles.dark : ''} ${scrolled ? styles.active : ''}`} style={{display: toggleMenu ? 'none' : ''}}>
             <HeaderContent isActive={true} disToggle={disToggle} toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
         </div>
     )

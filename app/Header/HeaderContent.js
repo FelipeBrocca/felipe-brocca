@@ -6,13 +6,14 @@ import { useTheme } from '../Context/ThemeContext'
 import ButtonTheme from './ButtonTheme'
 import ButtonLanguage from './ButtonLanguage'
 
-const HeaderContent = ({ toggleMenu, disToggle, setToggleMenu, isActive }) => {
+const HeaderContent = ({ toggleMenu, disToggle, isActive }) => {
     const { isDarkMode } = useTheme()
 
     const scrollToId = (id) => {
         if (document) {
             const element = document.getElementById(id);
             if (element) {
+                console.log(element);
                 element.scrollIntoView({ behavior: 'smooth' });
             }
         }
@@ -28,6 +29,15 @@ const HeaderContent = ({ toggleMenu, disToggle, setToggleMenu, isActive }) => {
                 priority={true}
                 className={styles.logo}
                 onClick={() => scrollToId('presentation-section')}
+            />
+            <Image
+                src='/logo.png'
+                width={500}
+                height={500}
+                alt='logo-principal'
+                priority={true}
+                className={styles.logoFixed}
+                onClick={() => scrollToId('headerRef')}
             />
             <div className={`${styles.headerContent} ${isDarkMode ? styles.dark : ''}`}>
                 <div className={styles.contextMang}>

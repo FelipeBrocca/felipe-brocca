@@ -60,6 +60,7 @@ export default function Home() {
               ? styles.mainPageDark
               : styles.mainPageBright
           }>
+            <div id='headerRef' className={styles.headerRef}></div>
             <Header />
             <Presentation />
             <About />
