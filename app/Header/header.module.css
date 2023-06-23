@@ -26,8 +26,11 @@
     transform: translateY(-100%);
     transition: all .2s;
     opacity: 0.5;
+    background-color: rgba(255, 255, 255, 0.903);
+    z-index: 100;
+}
+.headerFixedCont.dark{
     background-color: rgba(17, 17, 17, 0.971);
-    z-index: 10;
 }
 .headerFixedCont.active{
     transform: translateY(0);
@@ -41,8 +44,8 @@
     filter: drop-shadow(0 0 2px rgba(23, 23, 23, 0.729));
     cursor: pointer;
 }
-.hambMenuDark,
-.hambMenu{
+.headerContent .hambMenuDark,
+.headerContent .hambMenu{
     width: 30px;
     height: 30px;
     display: flex;
@@ -50,7 +53,19 @@
     justify-content: space-around;
     cursor: pointer;
     align-items: flex-end;
-    z-index: 101;
+}
+.menuCont .hambMenu,
+.menuCont .hambMenuDark{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    align-items: flex-end;
+    position: absolute;
+    top: 30px;
+    right: 20px;
 }
 .hambMenuDark div{
     height: 1.5px;
@@ -256,6 +271,10 @@ input:checked~.sun{
 }
 
 @media (min-width: 769px) {
+    .headerContent .hambMenu,
+    .headerContent .hambMenuDark{
+        display: none;
+    }
     .hambMenu,
     .hambMenuDark{
         display: none;

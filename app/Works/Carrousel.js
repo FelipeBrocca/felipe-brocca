@@ -145,7 +145,7 @@ const Carrousel = () => {
             </Swiper >
                 <span className={`${styles.slideHelp} ${isDarkMode ? styles.dark : ''}`}>
                 <p>&lt;&lt;</p>
-                <p >Deslizar</p>
+                <p>{language === 'es' ? 'Deslizar' : 'Slide'}</p>
                 <p>&gt;&gt;</p>
             </span>
         </div>
