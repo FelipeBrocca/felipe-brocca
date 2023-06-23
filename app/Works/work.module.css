@@ -1,0 +1,357 @@
+.section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0px;
+    gap: 50px;
+}
+.title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    align-self: center;
+    color: var(--grey);
+    padding: 20px 30px;
+    opacity: 0;
+    transition: all 1s;
+}
+.title.dark{
+    color: var(--white);
+}
+.title::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: var(--darkGreen);
+    clip-path: polygon(0 0, 0% 100%, 100% 50%);
+}
+.title::after{
+    content: '';
+    width: 0px;
+    height: 2px;
+    background-color: var(--darkGreen);
+    transition: all 1s;
+}
+.title.dark::after{
+    background-color: var(--green);
+}
+.title.title.dark::before{
+    background-color: var(--green);
+}
+.title.active{
+    opacity: 1;
+}
+.title.active::after{
+    width: 50%;
+}
+.worksCont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+}
+.worksCont > div{
+    min-height: 100px;
+}
+.unicred{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border: 2px solid var(--whiteLet);
+    border-radius: 5px;
+    position: relative;
+    padding: 40px 15px 15px 15px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.246);
+    max-width: 400px;
+}
+.unicred.dark{
+    border: 2px solid var(--grey);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+.unicredLogo{
+    position: absolute;
+    opacity: 0.1;
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.workTit{
+    color: var(--darkGreen);
+    font-size: 20px;
+    display: flex;
+    margin-bottom: 5px;
+    background-color: var(--white);
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    padding: 15px;
+}
+.workTit.dark{
+    background-color: var(--black);
+    color: var(--green);
+}
+.workTime{
+    color: var(--lightgrey);
+    margin-bottom: 20px;
+}
+.workDes{
+    color: var(--lightgrey);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+.workDes::before{
+    content: '';
+    clip-path: polygon(0 0, 0% 100%, 100% 50%);
+    width: 10px;
+    height: 10px;
+    background-color: var(--orange);
+    position: relative;
+    top: 5px;
+}
+.workTec{
+    margin: 15px 0;
+    color: var(--lightgrey);
+    display: flex;
+    gap: 10px;
+}
+.workTime.dark,
+.workDes.dark,
+.workTec.dark{
+    color: var(--whiteLet);
+}
+.workTec::before{
+    content: '';
+    clip-path: polygon(0 0, 0% 100%, 100% 50%);
+    width: 10px;
+    height: 10px;
+    background-color: var(--orange);
+    position: relative;
+    top: 5px;
+}
+.tecWorkCont{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    padding: 10px;
+}
+.tecWorkCont p{
+    color: var(--lightgrey);
+    font-size: 14px;
+    font-weight: 600;
+}
+.tecWorkCont.dark p{
+    color: var(--whiteLet);
+} 
+.ownBuilt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.titleBuilt{
+    padding: 20px;
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+    color: var(--grey);
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 1s;
+}
+.titleBuilt.dark{
+    color: var(--whiteLet);
+}
+.titleBuilt.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+.slideHelp{
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+    color: rgba(255, 136, 0, 0.664);
+    font-weight: 800;
+    animation: flickSlide 1s infinite;
+}
+.slideHelp.dark{
+    color: rgba(42, 230, 164, 0.44);
+}
+@keyframes flickSlide {
+    0%, 100%{
+        opacity: 0.1;
+    }
+    50%{
+        opacity: 1;
+    }
+}
+.freeJobs{
+    position: relative;
+    transition: all .5s;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+}
+.freeImg{
+    opacity: 0.2;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.freeImg.dark{
+    opacity: 0.1;
+}
+.sliderWrapper{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s;
+    color: var(--orange);
+    font-size: 20px;
+    font-weight: 800;
+}
+.sliderWrapper.dark{
+    color: var(--green);
+    font-size: 18px;
+}
+.sliderWrapper.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+.tasks li,
+.techs li{
+    list-style: none;
+}
+.titleJob{
+    color: var(--darkGreen);
+    font-size: 25px;
+    text-align: center;
+}
+.titleJob.dark{
+    color: var(--green);
+}
+.links{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.gitIcon{
+    font-size: 30px;
+    fill: var(--whiteLet);
+    cursor: pointer;
+}
+.pageIcon{
+    font-size: 25px;
+    color: var(--whiteLet);
+    cursor: pointer;
+}
+.gitIcon.dark:hover,
+.pageIcon.dark:hover{
+    color: var(--green);
+    fill: var(--green);
+}
+.gitIcon:hover,
+.pageIcon:hover{
+   color: var(--orange);
+   fill: var(--orange);
+}
+.techs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    color: var(--lightgrey);
+    font-size: 18px;
+    font-weight: 600;
+}
+.techs.dark{
+    color: var(--whiteLet);
+}
+.tasks{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    color: var(--grey);
+    align-items: center;
+    height: 50%;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+.tasks.dark{
+    color: var(--whiteLet);
+}
+.liTask{
+    display: inline-flex;
+    gap: 10px;
+    width: 100%;
+}
+.liTask::before{
+    content: '';
+    min-width: 10px;
+    height: 10px;
+    clip-path: polygon(0 0, 0% 100%, 100% 50%);
+    background-color: var(--orange);
+}
+.about{
+    width: 100%;
+    text-align: center;
+    color: var(--orange);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@media (min-width: 769px) {
+    .title{
+        font-size: 30px;
+    }
+    .unicred{
+        max-width: 600px;
+    }
+    .workTit{
+        font-size: 24px;
+    }
+    .workTime{
+        font-size: 18px;
+    }
+    .workDes{
+        font-size: 20px;
+    }
+    .workTec{
+        font-size: 20px;
+    }
+    .tecWorkCont p{
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .section{
+      padding-left: 130px;
+      max-width: 1200px;
+    }
+    .title.active::after{
+        width: 75%;
+    }
+}
