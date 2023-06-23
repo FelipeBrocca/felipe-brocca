@@ -303,6 +303,13 @@ input:checked~.sun{
     .menuContClosed{
         display: none;
     }
+    .headerFixedCont > .headerContent > .navbarBig > .navbar > .listNavbar,
+    .headerFixedCont > .headerContent > .navbarBig > .navbar > .listNavbarDark{
+        padding: 2px;
+        border: none;
+        box-shadow: none;
+    }
+
     .listNavbarDark,
     .listNavbar{
         display: flex;
