@@ -1,0 +1,128 @@
+.logoCont{
+    height: 100%;
+    max-height: 200px;
+    width: 100%;
+    max-width: 200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    animation: shadow 2s forwards;
+    box-shadow: inset 10px 10px 10px rgba(0, 0, 0, .05),
+    15px 25px 10px rgba(0, 0, 0, .05),
+    15px 20px 20px rgba(0, 0, 0, .05),
+    inset -10px -10px 15px rgba(255, 255, 255, .09)
+}
+.logoCont::before{
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: rgba(255, 255, 255, 0.4);
+    top: 35px;
+    left: 25px;
+    border-radius: 50%;
+    z-index: 1;
+    animation: reflex1 2s forwards;
+}
+.logoCont::after{
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: rgba(255, 255, 255, 0.4);
+    top: 25px;
+    left: 50px;
+    border-radius: 50%;
+    z-index: 1;
+    animation: reflex2 2s forwards;
+}
+.logoContDark{
+    height: 100%;
+    max-height: 200px;
+    width: 100%;
+    max-width: 200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    animation: shadow 2s forwards;
+    box-shadow: inset 10px 10px 10px rgba(0, 0, 0, .05),
+    15px 25px 10px rgba(0, 0, 0, .05),
+    15px 20px 20px rgba(0, 0, 0, .05),
+    inset -10px -10px 15px rgba(255, 255, 255, .09)
+}
+.logoContDark::before{
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: rgba(86, 88, 89, 0.2);
+    top: 35px;
+    left: 25px;
+    border-radius: 50%;
+    z-index: 1;
+    animation: reflex1 2s forwards;
+}
+.logoContDark::after{
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: rgba(86, 88, 89, 0.2);
+    top: 25px;
+    left: 50px;
+    border-radius: 50%;
+    z-index: 1;
+    animation: reflex2 2s forwards;
+}
+
+.logo{
+    width: 60%;
+    height: 60%;
+    position: relative;
+    left: 5px;
+}
+
+@keyframes shadow {
+    50%{
+        box-shadow: inset 10px 10px 10px rgba(0, 0, 0, .09),
+        15px 25px 10px rgba(0, 0, 0, .09),
+        15px 20px 20px rgba(0, 0, 0, .09),
+        inset -10px -10px 15px rgba(255, 255, 255, .09)
+    }
+    100%{
+        box-shadow: inset 10px 10px 10px rgba(0, 0, 0, .09),
+        20px 5px 5px rgba(0, 0, 0, .09),
+        45px 20px 60px rgba(0, 0, 0, .09),
+        inset -10px -10px 15px rgba(255, 255, 255, .09)
+    }
+}
+@keyframes reflex1 {
+    50%{
+        top: 35px;
+        left: 25px;
+    }
+    100%{
+        top: 50px;
+        left: 15px;
+    }
+}
+@keyframes reflex2 {
+    50%{
+        top: 25px;
+        left: 50px;
+    }
+    100%{
+        top: 35px;
+        left: 30px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .section{
+      padding-left: 150px;
+    }
+}
