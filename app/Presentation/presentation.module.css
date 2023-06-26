@@ -114,22 +114,6 @@
     .pres4{
         font-size: 20px;
     }
-    .pres1.dark,
-    .pres2.dark,
-    .pres3.dark,
-    .pres4.dark{
-        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4);
-    }
-    .pres1.dark,
-    .pres4.dark{
-        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
-    }
-    .pres1,
-    .pres2,
-    .pres3,
-    .pres4{
-        text-shadow: 2px 2px 4px rgba(48, 48, 48, 0.4);
-    }
     .button56.dark:hover{
         background-color: rgb(36, 35, 35);
         color: var(--whiteLet);

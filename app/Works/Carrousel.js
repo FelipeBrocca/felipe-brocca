@@ -41,7 +41,7 @@ const Carrousel = () => {
             <h2 className={`${styles.titleBuilt} ${isDarkMode ? styles.dark : ''} ${isActive ? styles.active : ''}`} ref={ref}>
                 {
                     language === 'es'
-                        ? 'Algunos trabajos que hice'
+                        ? 'Proyectos realizados'
                         : "Some things I've built"
                 }
             </h2>
