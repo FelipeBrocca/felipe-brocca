@@ -2,6 +2,7 @@
 import styles from './page.module.css'
 import { useTheme } from './Context/ThemeContext'
 import { useEffect, useState } from 'react'
+import Script from 'next/script'
 
 import Head from 'next/head'
 import Intro from './Intro/Intro'
@@ -42,6 +43,20 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Telugu:wght@100&display=swap" rel="stylesheet" />
       </Head>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-ZTV305V79Z"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZTV305V79Z');
+
+        `}
+      </Script>
       {
         loading
           ? isDarkMode !== null
