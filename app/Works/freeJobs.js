@@ -522,10 +522,10 @@ export const freeJobs = [
                     desc: 'Creation of API endpoints. Connection to the backend using Express, Node.js, and Sequelize. Implementation of MySQL for data storage.'
                 },
                 {
-                    desc: 'Gestión de autenticación y autorización de usuarios. Optimización de rendimiento y seguridad.'
+                    desc: 'Management of user authentication and authorization. Performance and security optimization.'
                 },
                 {
-                    desc: 'Diseño de la interfaz de usuario. Desarrollo de componentes reutilizables.'
+                    desc: 'User interface design. Development of reusable components.'
                 }
             ]
         }
